@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wudskq.dao.DemoDao">
+    <!--根据姓名查询这个人的所有信息-->
+    <select id="queryByName" resultType="com.wudskq.entity.Demo" parameterType="string">
+        select id,t_name,t_age,t_sex from t_demo where t_name=#{name}
+    </select>
+</mapper>
